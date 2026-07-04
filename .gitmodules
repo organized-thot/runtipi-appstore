@@ -1,0 +1,3 @@
+[submodule "apps/hermes-agent"]
+	path = apps/hermes-agent
+	url = ./apps/hermes-agent
