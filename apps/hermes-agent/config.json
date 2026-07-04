@@ -1,0 +1,42 @@
+{
+  "$schema": "../app-info-schema.json",
+  "id": "hermes-agent",
+  "name": "Hermes Agent",
+  "description": "The agent that grows with you",
+  "version": "1.0.0",
+  "image": "hermes-agent",
+  "port": 8100,
+  "categories": [
+    "utilities"
+  ],
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "HERMES UID",
+      "env_variable": "HERMES_UID",
+      "default": "10000",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "HERMES GID",
+      "env_variable": "HERMES_GID",
+      "default": "10000",
+      "required": false
+    }
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "short_desc": "The agent that grows with you",
+  "author": "NousResearch",
+  "source": "https://github.com/NousResearch/hermes-agent",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "tipi_version": 1,
+  "min_tipi_version": "4.5.0",
+  "created_at": 1783124001869,
+  "updated_at": 1783124001869
+}

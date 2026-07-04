@@ -1,0 +1,26 @@
+services:
+  hermes-agent:
+    image: hermes-agent:latest
+    container_name: hermes-agent
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/data/~/.hermes:/opt/data
+    environment:
+      - HERMES_UID=${HERMES_UID:-10000}
+      - HERMES_GID=${HERMES_GID:-10000}
+    x-runtipi:
+      is_main: true
+      internal_port: 8080
+  hermes-agent-dashboard:
+    image: hermes-agent:latest
+    container_name: hermes-agent-dashboard
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/data/~/.hermes:/opt/data
+    environment:
+      - HERMES_UID=${HERMES_UID:-10000}
+      - HERMES_GID=${HERMES_GID:-10000}
+    depends_on:
+      - hermes-agent
+x-runtipi:
+  schema_version: 2
