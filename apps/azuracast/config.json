@@ -1,0 +1,49 @@
+{
+  "$schema": "../app-info-schema.json",
+  "id": "azuracast",
+  "name": "AzuraCast",
+  "description": "A self-hosted web radio management suite, including turnkey installer tools for the full radio software stack and a modern, easy-to-use web app to manage your stations.",
+  "version": "8.5-fpm-trixie",
+  "image": "php",
+  "port": 8100,
+  "categories": [
+    "utilities"
+  ],
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "TZ",
+      "env_variable": "TZ",
+      "default": "\"UTC\" \\",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "LANG",
+      "env_variable": "LANG",
+      "default": "\"en_US.UTF-8\" \\",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "APPLICATION ENV",
+      "env_variable": "APPLICATION_ENV",
+      "default": "\"development\" \\",
+      "required": false
+    }
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "short_desc": "A self-hosted web radio management suite, including turnkey installer tools for the full radio…",
+  "author": "AzuraCast",
+  "source": "https://github.com/AzuraCast/AzuraCast",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "tipi_version": 1,
+  "min_tipi_version": "4.5.0",
+  "created_at": 1776017929422,
+  "updated_at": 1776017929422
+}

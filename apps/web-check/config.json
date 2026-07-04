@@ -1,0 +1,27 @@
+{
+  "$schema": "../app-info-schema.json",
+  "id": "web-check",
+  "name": "Web Check",
+  "description": "🕵️‍♂️ All-in-one OSINT tool for analysing any website",
+  "version": "1.0.0",
+  "image": "lissy93/web-check",
+  "port": 8101,
+  "categories": [
+    "utilities"
+  ],
+  "form_fields": [],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "short_desc": "🕵️‍♂️ All-in-one OSINT tool for analysing any website",
+  "author": "lissy93",
+  "source": "https://github.com/lissy93/web-check",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "tipi_version": 1,
+  "min_tipi_version": "4.5.0",
+  "created_at": 1776018309366,
+  "updated_at": 1776018309366
+}

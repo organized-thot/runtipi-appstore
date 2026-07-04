@@ -1,0 +1,67 @@
+services:
+  bolt-diy:
+    image: bolt-ai:production
+    container_name: bolt-diy
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+      - COMPOSE_PROFILES=${COMPOSE_PROFILES:-production}
+      - PORT=${PORT:-5173}
+      - GROQ_API_KEY=${GROQ_API_KEY:-latest}
+      - HuggingFace_API_KEY=${HuggingFace_API_KEY:-latest}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-latest}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-latest}
+      - OPEN_ROUTER_API_KEY=${OPEN_ROUTER_API_KEY:-latest}
+      - GOOGLE_GENERATIVE_AI_API_KEY=${GOOGLE_GENERATIVE_AI_API_KEY:-latest}
+      - OLLAMA_API_BASE_URL=${OLLAMA_API_BASE_URL:-latest}
+      - XAI_API_KEY=${XAI_API_KEY:-latest}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-latest}
+      - TOGETHER_API_BASE_URL=${TOGETHER_API_BASE_URL:-latest}
+      - AWS_BEDROCK_CONFIG=${AWS_BEDROCK_CONFIG:-latest}
+      - VITE_LOG_LEVEL=${VITE_LOG_LEVEL:-debug}
+      - DEFAULT_NUM_CTX=${DEFAULT_NUM_CTX:-32768}
+      - RUNNING_IN_DOCKER=${RUNNING_IN_DOCKER:-true}
+    x-runtipi:
+      is_main: true
+      internal_port: 5173
+  bolt-diy-app-dev:
+    image: bolt-ai:development
+    container_name: bolt-diy-app-dev
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/data/:/app
+    environment:
+      - NODE_ENV=${NODE_ENV:-development}
+      - VITE_HMR_PROTOCOL=${VITE_HMR_PROTOCOL:-ws}
+      - VITE_HMR_HOST=${VITE_HMR_HOST:-localhost}
+      - VITE_HMR_PORT=${VITE_HMR_PORT:-5173}
+      - CHOKIDAR_USEPOLLING=${CHOKIDAR_USEPOLLING:-true}
+      - WATCHPACK_POLLING=${WATCHPACK_POLLING:-true}
+      - PORT=${PORT:-5173}
+      - GROQ_API_KEY=${GROQ_API_KEY:-latest}
+      - HuggingFace_API_KEY=${HuggingFace_API_KEY:-latest}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-latest}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-latest}
+      - OPEN_ROUTER_API_KEY=${OPEN_ROUTER_API_KEY:-latest}
+      - XAI_API_KEY=${XAI_API_KEY:-latest}
+      - GOOGLE_GENERATIVE_AI_API_KEY=${GOOGLE_GENERATIVE_AI_API_KEY:-latest}
+      - OLLAMA_API_BASE_URL=${OLLAMA_API_BASE_URL:-latest}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-latest}
+      - TOGETHER_API_BASE_URL=${TOGETHER_API_BASE_URL:-latest}
+      - AWS_BEDROCK_CONFIG=${AWS_BEDROCK_CONFIG:-latest}
+      - VITE_LOG_LEVEL=${VITE_LOG_LEVEL:-debug}
+      - DEFAULT_NUM_CTX=${DEFAULT_NUM_CTX:-32768}
+      - RUNNING_IN_DOCKER=${RUNNING_IN_DOCKER:-true}
+  bolt-diy-app-prebuild:
+    image: ghcr.io/stackblitz-labs/bolt.diy:latest
+    container_name: bolt-diy-app-prebuild
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+      - COMPOSE_PROFILES=${COMPOSE_PROFILES:-production}
+      - PORT=${PORT:-5173}
+      - OLLAMA_API_BASE_URL=${OLLAMA_API_BASE_URL:-http://127.0.0.1:11434}
+      - DEFAULT_NUM_CTX=${DEFAULT_NUM_CTX:-32768}
+      - RUNNING_IN_DOCKER=${RUNNING_IN_DOCKER:-true}
+x-runtipi:
+  schema_version: 2

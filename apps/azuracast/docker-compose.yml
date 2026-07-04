@@ -1,0 +1,14 @@
+services:
+  azuracast:
+    image: php:8.5-fpm-trixie
+    container_name: azuracast
+    restart: unless-stopped
+    environment:
+      - TZ=${TZ:-"UTC" \}
+      - LANG=${LANG:-"en_US.UTF-8" \}
+      - APPLICATION_ENV=${APPLICATION_ENV:-"development" \}
+    x-runtipi:
+      is_main: true
+      internal_port: 80
+x-runtipi:
+  schema_version: 2

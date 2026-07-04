@@ -1,0 +1,182 @@
+{
+  "$schema": "../app-info-schema.json",
+  "id": "bolt-diy",
+  "name": "Bolt.Diy",
+  "description": "Prompt, run, edit, and deploy full-stack web applications using any LLM you want!",
+  "version": "production",
+  "image": "bolt-ai",
+  "port": 8100,
+  "categories": [
+    "utilities"
+  ],
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "NODE ENV",
+      "env_variable": "NODE_ENV",
+      "default": "production",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "COMPOSE PROFILES",
+      "env_variable": "COMPOSE_PROFILES",
+      "default": "production",
+      "required": false
+    },
+    {
+      "type": "number",
+      "label": "PORT",
+      "env_variable": "PORT",
+      "default": "5173",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "GROQ API KEY",
+      "env_variable": "GROQ_API_KEY",
+      "default": "latest",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "HuggingFace API KEY",
+      "env_variable": "HuggingFace_API_KEY",
+      "default": "latest",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "OPENAI API KEY",
+      "env_variable": "OPENAI_API_KEY",
+      "default": "latest",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "ANTHROPIC API KEY",
+      "env_variable": "ANTHROPIC_API_KEY",
+      "default": "latest",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "OPEN ROUTER API KEY",
+      "env_variable": "OPEN_ROUTER_API_KEY",
+      "default": "latest",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "GOOGLE GENERATIVE AI API KEY",
+      "env_variable": "GOOGLE_GENERATIVE_AI_API_KEY",
+      "default": "latest",
+      "required": false
+    },
+    {
+      "type": "fqdn",
+      "label": "OLLAMA API BASE URL",
+      "env_variable": "OLLAMA_API_BASE_URL",
+      "default": "latest",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "XAI API KEY",
+      "env_variable": "XAI_API_KEY",
+      "default": "latest",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "TOGETHER API KEY",
+      "env_variable": "TOGETHER_API_KEY",
+      "default": "latest",
+      "required": false
+    },
+    {
+      "type": "fqdn",
+      "label": "TOGETHER API BASE URL",
+      "env_variable": "TOGETHER_API_BASE_URL",
+      "default": "latest",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "AWS BEDROCK CONFIG",
+      "env_variable": "AWS_BEDROCK_CONFIG",
+      "default": "latest",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "VITE LOG LEVEL",
+      "env_variable": "VITE_LOG_LEVEL",
+      "default": "debug",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "DEFAULT NUM CTX",
+      "env_variable": "DEFAULT_NUM_CTX",
+      "default": "32768",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "RUNNING IN DOCKER",
+      "env_variable": "RUNNING_IN_DOCKER",
+      "default": "true",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "VITE HMR PROTOCOL",
+      "env_variable": "VITE_HMR_PROTOCOL",
+      "default": "ws",
+      "required": false
+    },
+    {
+      "type": "fqdn",
+      "label": "VITE HMR HOST",
+      "env_variable": "VITE_HMR_HOST",
+      "default": "localhost",
+      "required": false
+    },
+    {
+      "type": "number",
+      "label": "VITE HMR PORT",
+      "env_variable": "VITE_HMR_PORT",
+      "default": "5173",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "CHOKIDAR USEPOLLING",
+      "env_variable": "CHOKIDAR_USEPOLLING",
+      "default": "true",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "WATCHPACK POLLING",
+      "env_variable": "WATCHPACK_POLLING",
+      "default": "true",
+      "required": false
+    }
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "short_desc": "Prompt, run, edit, and deploy full-stack web applications using any LLM you want!",
+  "author": "stackblitz-labs",
+  "source": "https://github.com/stackblitz-labs/bolt.diy",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "tipi_version": 1,
+  "min_tipi_version": "4.5.0",
+  "created_at": 1776609038975,
+  "updated_at": 1776609038975
+}

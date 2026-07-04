@@ -1,0 +1,63 @@
+{
+  "$schema": "../app-info-schema.json",
+  "id": "librechat",
+  "name": "LibreChat",
+  "description": "Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.",
+  "version": "1.0.0",
+  "image": "registry.librechat.ai/danny-avila/librechat-dev",
+  "port": 8080,
+  "categories": [
+    "utilities"
+  ],
+  "form_fields": [
+    {
+      "type": "fqdn",
+      "label": "HOST",
+      "env_variable": "HOST",
+      "default": "0.0.0.0",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "MONGO URI",
+      "env_variable": "MONGO_URI",
+      "default": "mongodb://mongodb:27017/LibreChat",
+      "required": false
+    },
+    {
+      "type": "fqdn",
+      "label": "MEILI HOST",
+      "env_variable": "MEILI_HOST",
+      "default": "http://meilisearch:7700",
+      "required": false
+    },
+    {
+      "type": "number",
+      "label": "RAG PORT",
+      "env_variable": "RAG_PORT",
+      "default": "8000",
+      "required": false
+    },
+    {
+      "type": "fqdn",
+      "label": "RAG API URL",
+      "env_variable": "RAG_API_URL",
+      "default": "http://rag_api:8000",
+      "required": false
+    }
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "short_desc": "Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API…",
+  "author": "danny-avila",
+  "source": "https://github.com/danny-avila/LibreChat",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "tipi_version": 1,
+  "min_tipi_version": "4.5.0",
+  "created_at": 1776013383840,
+  "updated_at": 1776013383840
+}

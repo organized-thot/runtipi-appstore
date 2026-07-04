@@ -1,0 +1,12 @@
+services:
+  project-nomad:
+    image: node:22-slim
+    container_name: project-nomad
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+    x-runtipi:
+      is_main: true
+      internal_port: 8080
+x-runtipi:
+  schema_version: 2
